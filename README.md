@@ -1,9 +1,10 @@
-# Gaode Static Map URL Generator
+# Gaode Static Map URL Generator (高德静态地图URL生成器)
 
 [![build](https://github.com/alexcheng1982/gaode-static-map/actions/workflows/build.yaml/badge.svg)](https://github.com/alexcheng1982/gaode-static-map/actions/workflows/build.yaml)
 
 Generate URL
 for [Gaode Static Maps](https://developer.amap.com/api/webservice/guide/api/staticmaps/).
+生成高德地图的静态地图的URL.
 
 Add the following Maven dependency to your project.
 
