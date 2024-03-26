@@ -16,6 +16,6 @@ public class GeoLocation implements ParamValue {
 
   @Override
   public String toParamValue() {
-    return lat + "," + lng;
+    return lng + "," + lat;
   }
 }

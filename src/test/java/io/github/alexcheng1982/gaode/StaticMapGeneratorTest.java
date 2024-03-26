@@ -28,8 +28,8 @@ class StaticMapGeneratorTest {
         .lng(40)
         .build();
     GeoLocation p2 = GeoLocation.builder()
-        .lat(116.8)
-        .lng(40.05)
+        .lng(116.8)
+        .lat(40.05)
         .build();
     StaticMap map = StaticMap.builder()
         .key("demo")
