@@ -1,7 +1,20 @@
 # Gaode Static Map URL Generator
 
+[![build](https://github.com/alexcheng1982/gaode-static-map/actions/workflows/build.yaml/badge.svg)](https://github.com/alexcheng1982/gaode-static-map/actions/workflows/build.yaml)
+
 Generate URL
 for [Gaode Static Maps](https://developer.amap.com/api/webservice/guide/api/staticmaps/).
+
+Add the following Maven dependency to your project.
+
+```xml
+
+<dependency>
+  <groupId>io.github.alexcheng1982</groupId>
+  <artifactId>gaode-static-map</artifactId>
+  <version>1.0.0</version>
+</dependency>
+```
 
 Build a `StaticMap` and pass to `StaticMapGenerator.generate()` to generate the
 URL.
