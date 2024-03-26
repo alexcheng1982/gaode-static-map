@@ -37,29 +37,29 @@ class StaticMapGeneratorTest {
         .location(center)
         .zoom(10)
         .markers(Markers.builder()
-            .markersGroups(List.of(
+            .markersGroups(Arrays.asList(
                 MarkersGroup.builder()
                     .markerStyle(MarkerStyle.builder()
                         .size(MarkerSize.LARGE)
                         .label("A")
                         .build())
-                    .locations(List.of(center))
+                    .locations(Arrays.asList(center))
                     .build()
             ))
             .build())
         .labels(Labels.builder()
-            .labelsGroups(List.of(
+            .labelsGroups(Arrays.asList(
                 LabelsGroup.builder()
                     .labelStyle(LabelStyle.builder()
                         .content("Test")
                         .fontSize(16)
                         .build())
-                    .locations(List.of(center))
+                    .locations(Arrays.asList(center))
                     .build()
             ))
             .build())
         .paths(Paths.builder()
-            .pathsGroups(List.of(
+            .pathsGroups(Arrays.asList(
                 PathsGroup.builder()
                     .locations(Arrays.asList(
                         center, p1, p2
