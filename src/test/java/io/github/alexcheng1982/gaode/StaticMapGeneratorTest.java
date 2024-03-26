@@ -13,6 +13,7 @@ import io.github.alexcheng1982.gaode.param.MarkersGroup;
 import io.github.alexcheng1982.gaode.param.Paths;
 import io.github.alexcheng1982.gaode.param.PathsGroup;
 import java.util.Arrays;
+import java.util.List;
 import org.junit.jupiter.api.Test;
 
 class StaticMapGeneratorTest {
@@ -36,29 +37,29 @@ class StaticMapGeneratorTest {
         .location(center)
         .zoom(10)
         .markers(Markers.builder()
-            .markersGroups(Arrays.asList(
+            .markersGroups(List.of(
                 MarkersGroup.builder()
                     .markerStyle(MarkerStyle.builder()
                         .size(MarkerSize.LARGE)
                         .label("A")
                         .build())
-                    .locations(Arrays.asList(center))
+                    .locations(List.of(center))
                     .build()
             ))
             .build())
         .labels(Labels.builder()
-            .labelsGroups(Arrays.asList(
+            .labelsGroups(List.of(
                 LabelsGroup.builder()
                     .labelStyle(LabelStyle.builder()
-                        .content("测试")
+                        .content("Test")
                         .fontSize(16)
                         .build())
-                    .locations(Arrays.asList(center))
+                    .locations(List.of(center))
                     .build()
             ))
             .build())
         .paths(Paths.builder()
-            .pathsGroups(Arrays.asList(
+            .pathsGroups(List.of(
                 PathsGroup.builder()
                     .locations(Arrays.asList(
                         center, p1, p2

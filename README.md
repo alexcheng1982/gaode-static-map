@@ -6,6 +6,8 @@ Generate URL
 for [Gaode Static Maps](https://developer.amap.com/api/webservice/guide/api/staticmaps/).
 生成高德地图的静态地图的URL.
 
+Requires Java 11.
+
 Add the following Maven dependency to your project.
 
 ```xml
@@ -38,29 +40,29 @@ StaticMap map = StaticMap.builder()
     .location(center)
     .zoom(10)
     .markers(Markers.builder()
-        .markersGroups(Arrays.asList(
+        .markersGroups(List.of(
             MarkersGroup.builder()
                 .markerStyle(MarkerStyle.builder()
                     .size(MarkerSize.LARGE)
                     .label("A")
                     .build())
-                .locations(Arrays.asList(center))
+                .locations(List.of(center))
                 .build()
         ))
         .build())
     .labels(Labels.builder()
-        .labelsGroups(Arrays.asList(
+        .labelsGroups(List.of(
             LabelsGroup.builder()
                 .labelStyle(LabelStyle.builder()
                     .content("Test")
                     .fontSize(16)
                     .build())
-                .locations(Arrays.asList(center))
+                .locations(List.of(center))
                 .build()
         ))
         .build())
     .paths(Paths.builder()
-        .pathsGroups(Arrays.asList(
+        .pathsGroups(List.of(
             PathsGroup.builder()
                 .locations(Arrays.asList(
                     center, p1, p2
