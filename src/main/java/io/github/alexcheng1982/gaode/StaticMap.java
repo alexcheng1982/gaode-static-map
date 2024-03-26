@@ -22,7 +22,7 @@ public class StaticMap {
   @Default
   private Integer zoom = 10;
   @Default
-  private MapSize size = new MapSize(400, 400);
+  private MapSize size = MapSize.DEFAULT;
   @Default
   private MapScaleMode scale = MapScaleMode.NORMAL;
   @Default
