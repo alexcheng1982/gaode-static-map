@@ -20,16 +20,16 @@ class StaticMapGeneratorTest {
   @Test
   void simple() {
     GeoLocation center = GeoLocation.builder()
-        .lat(116.481485)
-        .lng(39.990464)
+        .lat(39.990464)
+        .lng(116.481485)
         .build();
     GeoLocation p1 = GeoLocation.builder()
-        .lat(116.5)
-        .lng(40)
+        .lat(40)
+        .lng(116.5)
         .build();
     GeoLocation p2 = GeoLocation.builder()
-        .lng(116.8)
         .lat(40.05)
+        .lng(116.8)
         .build();
     StaticMap map = StaticMap.builder()
         .key("demo")

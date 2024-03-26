@@ -9,6 +9,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+/**
+ * Generate {@linkplain StaticMap}s
+ */
 public class StaticMapGenerator {
 
   private StaticMapGenerator() {
