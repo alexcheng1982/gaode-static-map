@@ -1,6 +1,7 @@
 package io.github.alexcheng1982.gaode;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import io.github.alexcheng1982.gaode.param.GeoLocation;
 import io.github.alexcheng1982.gaode.param.LabelStyle;
@@ -13,7 +14,6 @@ import io.github.alexcheng1982.gaode.param.MarkersGroup;
 import io.github.alexcheng1982.gaode.param.Paths;
 import io.github.alexcheng1982.gaode.param.PathsGroup;
 import java.util.Arrays;
-import java.util.List;
 import org.junit.jupiter.api.Test;
 
 class StaticMapGeneratorTest {
@@ -39,7 +39,7 @@ class StaticMapGeneratorTest {
         .markers(Markers.builder()
             .markersGroups(Arrays.asList(
                 MarkersGroup.builder()
-                    .markerStyle(MarkerStyle.builder()
+                    .style(MarkerStyle.builder()
                         .size(MarkerSize.LARGE)
                         .label("A")
                         .build())
@@ -50,7 +50,7 @@ class StaticMapGeneratorTest {
         .labels(Labels.builder()
             .labelsGroups(Arrays.asList(
                 LabelsGroup.builder()
-                    .labelStyle(LabelStyle.builder()
+                    .style(LabelStyle.builder()
                         .content("Test")
                         .fontSize(16)
                         .build())
@@ -70,5 +70,8 @@ class StaticMapGeneratorTest {
         .build();
     String url = StaticMapGenerator.generate(map);
     assertNotNull(url);
+    assertTrue(url.contains("markers="));
+    assertTrue(url.contains("paths="));
+    assertTrue(url.contains("labels="));
   }
 }

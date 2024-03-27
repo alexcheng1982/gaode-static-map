@@ -1,6 +1,5 @@
 package io.github.alexcheng1982.gaode.param;
 
-import io.github.alexcheng1982.gaode.ParamValue;
 import java.util.stream.Stream;
 import lombok.Builder;
 import lombok.Builder.Default;
@@ -8,7 +7,7 @@ import lombok.Data;
 
 @Data
 @Builder
-public class PathStyle implements ParamValue {
+public class PathStyle implements Style {
 
   @Default
   private int weight = 5;

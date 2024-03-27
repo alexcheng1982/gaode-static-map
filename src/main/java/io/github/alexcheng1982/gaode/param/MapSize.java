@@ -1,9 +1,7 @@
 package io.github.alexcheng1982.gaode.param;
 
 import io.github.alexcheng1982.gaode.ParamValue;
-import jdk.jfr.DataAmount;
 import lombok.Builder;
-import lombok.Data;
 import lombok.Value;
 
 @Value
