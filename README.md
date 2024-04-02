@@ -9,6 +9,9 @@ for [Gaode Static Maps](https://developer.amap.com/api/webservice/guide/api/stat
 
 Requires Java 8.
 
+A [Gaode API key](https://lbs.amap.com/api/webservice/create-project-and-key) is
+required to render the map.
+
 Add the following Maven dependency to your project.
 
 ```xml
@@ -41,29 +44,29 @@ StaticMap map = StaticMap.builder()
     .location(center)
     .zoom(10)
     .markers(Markers.builder()
-        .markersGroups(List.of(
+        .markersGroups(Arrays.asList(
             MarkersGroup.builder()
-                .markerStyle(MarkerStyle.builder()
+                .style(MarkerStyle.builder()
                     .size(MarkerSize.LARGE)
                     .label("A")
                     .build())
-                .locations(List.of(center))
+                .locations(Arrays.asList(center))
                 .build()
         ))
         .build())
     .labels(Labels.builder()
-        .labelsGroups(List.of(
+        .labelsGroups(Arrays.asList(
             LabelsGroup.builder()
-                .labelStyle(LabelStyle.builder()
+                .style(LabelStyle.builder()
                     .content("Test")
                     .fontSize(16)
                     .build())
-                .locations(List.of(center))
+                .locations(Arrays.asList(center))
                 .build()
         ))
         .build())
     .paths(Paths.builder()
-        .pathsGroups(List.of(
+        .pathsGroups(Arrays.asList(
             PathsGroup.builder()
                 .locations(Arrays.asList(
                     center, p1, p2
@@ -74,3 +77,6 @@ StaticMap map = StaticMap.builder()
     .build();
 String url = StaticMapGenerator.generate(map);
 ```
+
+The output url looks
+like `https://restapi.amap.com/v3/staticmap?size=400*400&paths=5%2C0x0000FF%2C1.0%2C%2C%3A116.481485%2C39.990464%3B116.5%2C40.0%3B116.8%2C40.05&scale=1&location=116.481485%2C39.990464&zoom=10&markers=large%2C0xFC6054%2CA%3A116.481485%2C39.990464&key=demo&labels=Test%2C0%2C0%2C16%2C0xFFFFFF%2C0x5288d8%3A116.481485%2C39.990464&traffic=0`.
