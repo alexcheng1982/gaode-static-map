@@ -16,6 +16,8 @@ public class MarkerStyle implements Style {
 
   @Override
   public String toParamValue() {
-    return ParamValueUtils.build(Stream.of(size, color, label));
+    return ParamValueUtils.build(
+        Stream.of(size, color,
+            label != null ? label.trim().substring(0, 1) : null));
   }
 }

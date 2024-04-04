@@ -21,10 +21,13 @@ public class LabelStyle implements Style {
   @Default
   private String background = "0x5288d8";
 
-
   @Override
   public String toParamValue() {
     return ParamValueUtils.build(
-        Stream.of(content, font, bold, fontSize, fontColor, background));
+        Stream.of(
+            content != null ? content.trim().replace(" ", "").substring(0, 15)
+                : null,
+            font, bold, Math.max(Math.min(fontSize, 72), 1), fontColor,
+            background));
   }
 }
