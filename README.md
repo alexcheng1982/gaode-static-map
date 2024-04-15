@@ -1,7 +1,7 @@
 # Gaode Static Map URL Generator (高德静态地图URL生成器)
 
 [![build](https://github.com/alexcheng1982/gaode-static-map/actions/workflows/build.yaml/badge.svg)](https://github.com/alexcheng1982/gaode-static-map/actions/workflows/build.yaml)
-![Maven Central Version](https://img.shields.io/maven-central/v/io.github.alexcheng1982/gaode-static-map)
+[![Maven Central Version](https://img.shields.io/maven-central/v/io.github.alexcheng1982/gaode-static-map)](https://central.sonatype.com/artifact/io.github.alexcheng1982/gaode-static-map)
 
 Generate URL
 for [Gaode Static Maps](https://developer.amap.com/api/webservice/guide/api/staticmaps/).
