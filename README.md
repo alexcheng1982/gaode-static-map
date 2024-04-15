@@ -12,7 +12,9 @@ Requires Java 8.
 A [Gaode API key](https://lbs.amap.com/api/webservice/create-project-and-key) is
 required to render the map.
 
-Add the following Maven dependency to your project.
+Add the
+following [Maven dependency](https://central.sonatype.com/artifact/io.github.alexcheng1982/gaode-static-map)
+to your project.
 
 ```xml
 
